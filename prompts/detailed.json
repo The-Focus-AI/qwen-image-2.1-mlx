@@ -1,0 +1,52 @@
+[
+  {
+    "id": "01-bicycle",
+    "seed": 101,
+    "prompt": "A single red city bicycle locked to a gray metal pole at the curb of a wet asphalt street after rain. One frame, one saddle, two round wheels with intact spokes, a kickstand down, and a small rear rack. The front wheel is fully visible and does not pass through the pole. Puddles reflect the overcast sky and the red frame. White lane markings, a stone building across the street, soft diffuse daylight, photorealistic street photograph, 50mm lens."
+  },
+  {
+    "id": "02-teapot",
+    "seed": 102,
+    "prompt": "A cobalt blue speckled ceramic teapot with a fitted lid, a short spout, and one loop handle, sitting on a worn oak table. A small green houseplant in a clay pot stands to the left of the teapot. Morning light comes through a wooden window behind them, with soft shadows on the tabletop. Photorealistic still life, sharp focus on the glaze, shallow depth of field."
+  },
+  {
+    "id": "03-noodles",
+    "seed": 103,
+    "prompt": "A bowl of hand-pulled wheat noodles in a clear broth on a small metal table at a night market. Chopped scallions, chili oil, and a soft-boiled egg cut in half sit on top. Steam rises. A paper napkin, wooden chopsticks, and a chipped enamel cup of tea are beside the bowl. Warm tungsten light, photorealistic food photography, close framing."
+  },
+  {
+    "id": "04-portrait",
+    "seed": 104,
+    "prompt": "Portrait of a woman in her thirties standing in a sunlit kitchen, looking just past the camera with a calm expression. Dark hair tied back, a faded indigo linen shirt, a small scar on her left eyebrow. Window light from the left, a blurred enamel kettle behind her. Photorealistic, natural skin texture, 85mm lens, no text."
+  },
+  {
+    "id": "05-bookstore",
+    "seed": 105,
+    "prompt": "The aisle of a small independent bookstore in the late afternoon. Tall wooden shelves packed with worn paperbacks, a rolling ladder, and a shaft of dusty sunlight across the floor. A green reading lamp is on at a table with an open book and a ceramic mug. No people. Photorealistic interior photograph, quiet and slightly cluttered."
+  },
+  {
+    "id": "06-shop-sign",
+    "seed": 106,
+    "prompt": "A narrow street in an old neighborhood at dusk. A wooden shopfront has a hand-painted sign that reads \"RIVER BOOKS\" in dark green serif letters, and a smaller hanging board that reads \"OPEN\". Warm light inside the shop, wet cobblestones, a bicycle parked neatly against the wall, not overlapping the sign. Photorealistic, the lettering is spelled exactly as written."
+  },
+  {
+    "id": "07-cat",
+    "seed": 107,
+    "prompt": "An orange tabby cat sitting upright on a windowsill, watching rain on the glass. One cat, two ears, two eyes, a striped tail curled around its paws. The room behind is dim, with a knitted blanket on a chair. Cool gray daylight from the window, photorealistic, fine fur detail."
+  },
+  {
+    "id": "08-kitchen",
+    "seed": 108,
+    "prompt": "A home baker's counter just after mixing. A wooden board holds a round of shaggy bread dough, a bench scraper, and a dusting of flour. A glass bowl of water, a kitchen scale reading 500, and a linen towel are nearby. North-facing window light, photorealistic, no people, no extra hands."
+  },
+  {
+    "id": "09-coast",
+    "seed": 109,
+    "prompt": "A two-lane coastal road in the morning, seen from the shoulder. Dry grass, a weathered guardrail, and the ocean below with a low fog bank. One empty asphalt lane curving left, a yellow center line, no cars. Soft sun through haze, photorealistic landscape photograph."
+  },
+  {
+    "id": "10-watch",
+    "seed": 110,
+    "prompt": "Product photograph of a stainless steel wristwatch on a dark slate surface. Round case, clean white dial, black stick indices, black leather strap, crown on the right side of the case. One watch, nothing overlapping it. Soft studio light from the upper left, a faint reflection on the slate, photorealistic, sharp logo-free dial."
+  }
+]

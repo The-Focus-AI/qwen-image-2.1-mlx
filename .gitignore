@@ -1,1 +1,8 @@
 node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Generated images, sidecars, and timing logs
+outputs/

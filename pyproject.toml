@@ -1,0 +1,8 @@
+[project]
+name = "qwen-image-2.1-mlx"
+version = "0.1.0"
+description = "Local Qwen-Image-2.1 text-to-image on Apple Silicon via mflux."
+requires-python = ">=3.13,<3.15"
+dependencies = [
+    "mflux @ git+https://github.com/mflux-community/mflux.git@ada53237b2ac865bc649ef1d06ac1b19b6983865",
+]
