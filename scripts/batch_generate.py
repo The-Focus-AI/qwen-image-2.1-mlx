@@ -13,15 +13,26 @@ import time
 from pathlib import Path
 
 
+def output_dir(width: int, height: int, quantize: int, steps: int) -> Path:
+    size = str(width) if width == height else f"{width}x{height}"
+    return Path(f"outputs/mflux/{size}-q{quantize}-{steps}step")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--prompts", type=Path, required=True)
-    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--prompts", type=Path, default=Path("prompts/detailed.json"))
+    parser.add_argument(
+        "--out",
+        type=Path,
+        help="defaults to outputs/mflux/{size}-q{bits}-{steps}step",
+    )
     parser.add_argument("--steps", type=int, default=20)
     parser.add_argument("--width", type=int, default=1024)
     parser.add_argument("--height", type=int, default=1024)
     parser.add_argument("--quantize", type=int, default=8)
     args = parser.parse_args()
+    if args.out is None:
+        args.out = output_dir(args.width, args.height, args.quantize, args.steps)
 
     jobs = json.loads(args.prompts.read_text())
     args.out.mkdir(parents=True, exist_ok=True)

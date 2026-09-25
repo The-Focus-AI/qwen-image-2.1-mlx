@@ -1,0 +1,54 @@
+# mise run setup
+# mise run generate
+#
+# generate tasks skip any image that is already on disk.
+
+[tasks.setup]
+description = "Install mflux, build sd-cli, and download every weight file"
+depends = ["setup:sdcpp", "download:uncensored"]
+
+[tasks."setup:mflux"]
+description = "Create .venv and install pinned mflux"
+run = "./scripts/setup_mflux.sh"
+
+[tasks."setup:sdcpp"]
+description = "Clone stable-diffusion.cpp into this repo and build the Metal CLI"
+run = "./scripts/setup_sdcpp.sh"
+
+[tasks."download:mflux"]
+description = "Download the official diffusers weights into the Hugging Face cache"
+depends = ["setup:mflux"]
+run = "./scripts/download_weights.sh mflux"
+
+[tasks."download:official"]
+description = "Download the official Q4 GGUF, the text encoder, and link the VAE"
+depends = ["download:mflux"]
+run = "./scripts/download_weights.sh official"
+
+[tasks."download:uncensored"]
+description = "Download the uncensored Q4 GGUF"
+depends = ["download:official"]
+run = "./scripts/download_weights.sh uncensored"
+
+[tasks.generate]
+description = "Run every prompt file. Skips images that already exist. One job at a time."
+depends = ["generate:explicit"]
+
+[tasks."generate:mflux"]
+description = "Detailed mflux prompts at 1024, 20 steps, q8. Skips existing PNGs."
+run = ".venv/bin/python scripts/batch_generate.py --steps 20"
+
+[tasks."generate:sdcpp"]
+description = "prompts/sdcpp.json on the official Q4 weights. Skips existing images."
+depends = ["generate:mflux"]
+run = ".venv/bin/python scripts/generate_sdcpp.py --prompts prompts/sdcpp.json --weights official --steps 20"
+
+[tasks."generate:uncensored"]
+description = "prompts/sdcpp.json on the uncensored Q4 weights. Skips existing images."
+depends = ["generate:sdcpp"]
+run = ".venv/bin/python scripts/generate_sdcpp.py --prompts prompts/sdcpp.json --weights uncensored --steps 20"
+
+[tasks."generate:explicit"]
+description = "prompts/explicit.json on the official Q4 weights. Skips existing images."
+depends = ["generate:uncensored"]
+run = ".venv/bin/python scripts/generate_sdcpp.py --prompts prompts/explicit.json --weights official --steps 20"

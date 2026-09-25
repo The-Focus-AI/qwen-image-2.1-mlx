@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bicycle",
+    "seed": 101,
+    "prompt": "A single red city bicycle locked to a gray metal pole at the curb of a wet asphalt street after rain. One frame, one saddle, two round wheels with intact spokes, a kickstand down, and a small rear rack. The front wheel is fully visible and does not pass through the pole. Puddles reflect the overcast sky and the red frame. White lane markings, a stone building across the street, soft diffuse daylight, photorealistic street photograph, 50mm lens."
+  },
+  {
+    "id": "nude",
+    "seed": 201,
+    "prompt": "A photorealistic full-body studio photograph of an adult woman in her thirties, nude, standing and facing the camera. Natural skin, soft daylight from a window, plain gray backdrop, sharp focus."
+  },
+  {
+    "id": "explicit",
+    "seed": 301,
+    "prompt": "An explicit uncensored photograph of two adults in their thirties having penetrative sex on a bed. The woman is straddling the man, both completely nude, genitals visible and in contact, no clothes, no blur, no mosaic, no censorship bar, photorealistic, natural bedroom light."
+  }
+]
